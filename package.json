@@ -1,6 +1,6 @@
 {
 	"name": "@reprex/create-project",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"author": "SeyyedKhandon@gmail.com",
 	"description": "A CLI to bootstrap my new projects",
 	"main": "src/index.js",
@@ -29,5 +29,14 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [ "cli", "create-project" ],
-	"license": "MIT"
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/web-reprex/create-project.git"
+	  },
+	  "bugs": {
+		"url": "https://github.com/web-reprex/create-project/issues"
+	  },
+	  "homepage": "https://github.com/web-reprex/create-project#readme",
+	  "contributors": ["SeyyedKhandon@gmail.com", "MajidTed@gmail.com"]
 }
