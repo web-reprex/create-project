@@ -1,0 +1,22 @@
+{
+	"name": "@reprex/create-project",
+	"version": "1.0.0",
+	"author": "SeyyedKhandon@gmail.com",
+	"description": "A CLI to bootstrap my new projects",
+	"main": "src/index.js",
+	"bin": {
+		"@reprex/create-project": "bin/create-project",
+		"create-project": "bin/create-project"
+	},
+	"dependencies": {
+		"esm": "^3.2.25"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [ "cli", "create-project" ],
+	"license": "MIT"
+}
