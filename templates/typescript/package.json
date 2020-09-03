@@ -1,0 +1,17 @@
+{
+	"name": "typescript-template",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Seyyedkhandon@gmail.com",
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^4.0.2"
+	}
+}
