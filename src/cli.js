@@ -10,12 +10,11 @@ function parseArgumentsIntoOptions(rawArgs) {
         '-g': '--git',
         '-y': '--yes',
         '-i': '--install',
-    }
-    const option = {
+    };
+    const options = {
         argv: rawArgs.slice(2),
     };
-    const args = arg(spec, option);
-    console.log(JSON.stringify(args));
+    const args = arg(spec, options);
     return {
         skipPrompts: args['--yes'] || false,
         git: args['--git'] || false,
@@ -23,8 +22,9 @@ function parseArgumentsIntoOptions(rawArgs) {
         runInstall: args['--install'] || false,
     };
 }
+
 async function promptForMissingOptions(options) {
-    const defaultTemplate = 'JavaScript';
+    const defaultTemplate = 'javascript';
     if (options.skipPrompts) {
         return {
             ...options,
@@ -38,7 +38,7 @@ async function promptForMissingOptions(options) {
             type: 'list',
             name: 'template',
             message: 'Please choose which project template to use',
-            choices: ['JavaScript', 'TypeScript'],
+            choices: ['javascript', 'typescript'],
             default: defaultTemplate,
         });
     }
@@ -47,7 +47,7 @@ async function promptForMissingOptions(options) {
         questions.push({
             type: 'confirm',
             name: 'git',
-            message: 'Initialize a git repository?',
+            message: 'Should a git be initialized?',
             default: false,
         });
     }
@@ -59,6 +59,7 @@ async function promptForMissingOptions(options) {
         git: options.git || answers.git,
     };
 }
+
 export async function cli(args) {
     let options = parseArgumentsIntoOptions(args);
     options = await promptForMissingOptions(options);
